@@ -16,7 +16,7 @@
   <h1 align="center">Field Level Map webview</h3>
 
   <p align="center">
-    Enable the processing of event coming <geosys/> to get, format and publish analytic on a storage account.
+    Demonstrate how to integrate &ltgeosys/&gt api field level maps within OpenLayer or Leaflet.
     <br />
     <a href=https://earthdailyagro.com/><strong>Who we are</strong></a>
     <br />
