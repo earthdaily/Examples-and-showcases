@@ -16,16 +16,16 @@
   <h1 align="center">Field Level Map webview</h3>
 
   <p align="center">
-    Demonstrate how to integrate &ltgeosys/&gt api field level maps within OpenLayer or Leaflet.
+    The current example aims to provide samples, snippets and examples on how to display field level maps coming from &ltgeosys/&gt api within Openlayers, Leaflet, or other libraries.
     <br />
     <a href=https://earthdailyagro.com/><strong>Who we are</strong></a>
     <br />
     <br />
-    <a href=https://github.com/GEOSYS/AnalyticStreamFormater>Project description</a>
+    <a href=https://github.com/GEOSYS/Examples-and-showcases</a>
     ·
-    <a href=https://github.com/GEOSYS/AnalyticStreamFormater/issues>Report Bug</a>
+    <a href=https://github.com/GEOSYS/Examples-and-showcases/issues>Report Bug</a>
     ·
-    <a href=https://github.com/GEOSYS/AnalyticStreamFormater/issues>Request Feature</a>
+    <a href=https://github.com/GEOSYS/Examples-and-showcases/issues>Request Feature</a>
   </p>
 </p>
 
@@ -35,7 +35,7 @@
 [![Twitter][twitter-shield]][twitter-url]
 [![Youtube][youtube-shield]][youtube-url]
 <!--[![languages][language-python-shiedl]][]-->
-[![languages][NETcore-shield]][NETcore-url]
+<!--[![languages][NETcore-shield]][NETcore-url]-->
 <!--[![CITest][CITest-shield]][CITest-url]-->
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
@@ -47,45 +47,22 @@
 <!--[![Stargazers][stars-shield]][stars-url]-->
 
 <!-- TABLE OF CONTENTS -->
-<details open>
+<details closed>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
+        <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#use-cases">Use cases</a></li>
     <li><a href="#support-development">Support development</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#copyrights">Copyrights</a></li>
   </ol>
 </details>
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-EarthDaily Agro is the agricultural analysis division of EartDaily Analytics. Learn more about Earth Daily at [EarthDaily Analytics | Satellite imagery & data for agriculture, insurance, surveillance](https://earthdaily.com/).  EarthDaily Agro uses satellite imaging to provide advanced analytics to mitigate risk and increase efficiencies – leading to more sustainable outcomes for the organizations and people who feed the planet.
-<p align="center">
-  <a href=https://earthdailyagro.com/geosys/>
-    <img src=https://earthdailyagro.com/wp-content/uploads/2022/01/new-logo.png alt="Logo" width="400">
-  </a>
-</p>
-
-Throught our <geosys/> platform, we make geospatial analytics easily accessible for you to be browsed or analyzed, within our cloud or within your own environment. We provide developers and data scientists both flexibility and extensibility with analytic ready data and digital agriculture ready development blocks. We empower your team to enrich your systems with information at the field, regional or continent level via our API or Apps.
-
-We have a team of experts around the world that understand local crops and ag industry, as well as advanced analytics to support your business.
-
-We have established a developer community to provide you with plug-ins and integrations to be able to discover, request and use aggregate imagery products based on Landsat, Sentinel, Modis and many other open and commercial satellite sensors.
-
-The current project aims to provide samples, snippets and examples on how to display field leval maps derived from satelite imagery within Openlayers, Leaflet, or other libraries..
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -145,25 +122,7 @@ The example files are in the MapProduct folder:
     * **createLeafletMap**: creates a Leaflet map from the result of the MapProduct API.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-   
-<!-- FEATURES -->
-## Features
-
-### Standart features 
-
-
-
   
-### Customization
-If you want to manage the integration of notification inside your platform, 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-## Use cases
-
-
-
 <!-- RESOURCES -->
 ## Resources 
 The following links will provide access to more information:
