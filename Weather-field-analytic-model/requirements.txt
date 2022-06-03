@@ -1,0 +1,5 @@
+numpy==1.19.5
+fiona
+shapely
+pandas
+geopandas
