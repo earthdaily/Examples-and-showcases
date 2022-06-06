@@ -13,19 +13,19 @@
     <img src=https://earthdailyagro.com/wp-content/uploads/2022/01/Logo.svg alt="Logo" width="400" height="200">
   </a>
 
-  <h1 align="center">Field Level Map webview</h3>
+  <h1 align="center">Examples & showcases</h3>
 
   <p align="center">
-    Demonstrate how to integrate &ltgeosys/&gt api field level maps within OpenLayer or Leaflet.
+    Code examples and showcase on how to best leverage &ltgeosys/&gt platform capabilities.
     <br />
     <a href=https://earthdailyagro.com/><strong>Who we are</strong></a>
     <br />
     <br />
-    <a href=https://github.com/GEOSYS/AnalyticStreamFormater>Project description</a>
+    <a href=https://github.com/GEOSYS/Examples-and-showcases>Project description</a>
     ·
-    <a href=https://github.com/GEOSYS/AnalyticStreamFormater/issues>Report Bug</a>
+    <a href=https://github.com/GEOSYS/Examples-and-showcases/issues>Report Bug</a>
     ·
-    <a href=https://github.com/GEOSYS/AnalyticStreamFormater/issues>Request Feature</a>
+    <a href=https://github.com/GEOSYS/Examples-and-showcases/issues>Request Feature</a>
   </p>
 </p>
 
@@ -34,20 +34,20 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Twitter][twitter-shield]][twitter-url]
 [![Youtube][youtube-shield]][youtube-url]
-<!--[![languages][language-python-shiedl]][]-->
-[![languages][NETcore-shield]][NETcore-url]
-<!--[![CITest][CITest-shield]][CITest-url]-->
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
   
 </div>
 
 <!--[![Stargazers][GitStars-shield]][GitStars-url]-->
+<!--[![languages][NETcore-shield]][NETcore-url]-->
 <!--[![Forks][forks-shield]][forks-url]-->
 <!--[![Stargazers][stars-shield]][stars-url]-->
+<!--[![CITest][CITest-shield]][CITest-url]-->
+<!--[![languages][language-python-shiedl]][]-->
 
 <!-- TABLE OF CONTENTS -->
-<details open>
+<details close>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -60,8 +60,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#use-cases">Use cases</a></li>
+    <li><a href="#examples">Examples</a></li>
     <li><a href="#support-development">Support development</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -79,13 +78,13 @@ EarthDaily Agro is the agricultural analysis division of EartDaily Analytics. Le
   </a>
 </p>
 
-Throught our <geosys/> platform, we make geospatial analytics easily accessible for you to be browsed or analyzed, within our cloud or within your own environment. We provide developers and data scientists both flexibility and extensibility with analytic ready data and digital agriculture ready development blocks. We empower your team to enrich your systems with information at the field, regional or continent level via our API or Apps.
+ <p align="left">
+Throught our &ltgeosys/&gt platform, we make geospatial analytics easily accessible for you to be browsed or analyzed, within our cloud or within your own environment. We provide developers and data scientists both flexibility and extensibility with analytic ready data and digital agriculture ready development blocks. We empower your team to enrich your systems with information at the field, regional or continent level via our API or Apps.
+</p>
 
 We have a team of experts around the world that understand local crops and ag industry, as well as advanced analytics to support your business.
 
-We have established a developer community to provide you with plug-ins and integrations to be able to discover, request and use aggregate imagery products based on Landsat, Sentinel, Modis and many other open and commercial satellite sensors.
-
-The current project aims to provide samples, snippets and examples on how to display field leval maps derived from satelite imagery within Openlayers, Leaflet, or other libraries..
+The current project aims to provide samples, snippets and examples on how to integrate data and analytics but expand and enrich capabilites by creating your own analytic based satellite imagery, weather and many others available inputs. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -95,73 +94,51 @@ The current project aims to provide samples, snippets and examples on how to dis
 
 ### Prerequisites
 
-Use of this project requires valids credentials from the '<geosys/> platform . If you need to get trial access, please register [here](https://earthdailyagro.com/geosys-api/#get-started).
+ <p align="left">
+Use of this project requires valids credentials from the &ltgeosys/&gt platform . If you need to get trial access, please register <a href=https://earthdailyagro.com/geosys-api/#get-started>here</a>.
+</p>
+
 
 ### Installation
-To start replicate current project and launch it using your code editor.
+To access and try availble examples, you can either fork the current repo and use your prefered code editor or use try Python notebook on MyBinder usin the follwing link.
+
+[![badge](https://img.shields.io/badge/Try%20%3Cgeosys/%3E-examples%20-579ACA.svg?logo=data:image/png;base64,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)](https://[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GEOSYS/Examples-and-showcases/main?labpath=Notebooks))
 
 ### Configuration
 
-For steps 1),2), and 3) please refer to the existing Geosys API documentation.
-You will have to use : your login/password, your field Id and an image that covers your field. In this projet, we are supposing that you know how to do those steps.
-The purpose of this repo is to highlight the OpenLayer & Leaflet integration, not to focus on the Geosys API.
-
-The workflow steps are:
-1) Get the token
-2) Get the map product properties including the links to the image, the world file, the legend, etc.
-3) Get the product image(PNG)/world file (PGW) and transform it into image(BLOB)/image extent (ARRAY).
-4) Create a map with OpenLayers and another with Leaflet.
-Update the appseettings file: 
-
-```
-"Azure": { 
-   "BlobStorage": {
-    "ConnectionString": "MyAzureBlobStorageConnectionString" <- Put the connection string to your Microsoft Storage account }
-    }, 
-   "IdentityServer": { 
-    "Url": "IdentityServerUrl", -> On veut target la préprod ou/et la prod ??? 
-    "TokenEndPoint": "connect/token", 
-    "UserLogin": "myuser", <- Set the user login get from your trial access here "UserPassword": 
-    "mypassword", <- Set the password get from your trial access here 
-    "ClientId": "myclientid", <- Set the clientId get from your trial access here "ClientSecret": 
-    "myclientsecret", <- Set the clientSecret get from your trial access here 
-    "Scope": "openid offline_access", "GrantType": "password" 
-    }, 
-    "MapProduct": { 
-      "Url": "MapProductUrl"
-     }
-```
-Finally build and deploy host this web project in your infrastructure.
-The example files are in the MapProduct folder:
-* **maps.html**
-    * **Head**: includes the libraries and CSS of Openlayers and Leaflet, the CSS of the page and the JS files.
-    * **Body**: includes the HTMLElement to receive the maps, and a IIFE to run the calls to MapProduct APIs.
-* **mapproduct.js**: includes the methods handling the MapProduct APIs.
-    * **getToken**: gets the access_token.
-    * **getProductLinks**: gets the map product properties: image URL, world file URL, legend URL, colormap, etc.
-    * **getProduct**: gets the image /the world file and transforms them into image / image extent usable in Openlayers and Leaflet.
-* **maps.js**:
-    * **createOpenlayersMap**: creates an Openlayers map from the result of the MapProduct API.
-    * **createLeafletMap**: creates a Leaflet map from the result of the MapProduct API.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
    
-<!-- FEATURES -->
-## Features
+   
+<!-- EXAMPLES -->
+## Examples
 
-### Standart features 
+### <geosys/> Integration
 
+<p align="left">
+This set of examples will focus on how to integrate data, metrics and analytics from the &ltgeosys/&gt platform into your own solutions. 
+</p>
 
+Here are the available examples:
+- Integrate field level map (NDVI...) into most common online GIS library like Openlayers, Leaflet, or other JS libraries. See
+[code example  ](https://github.com/GEOSYS/Examples-and-showcases/tree/main/Field%20map%20web%20integration%20showcase)
+- Get inputs to feed your Python models using GeosysPy. See
+[notebook  ](https://github.com/GEOSYS/Examples-and-showcases/blob/main/Notebooks/GeosysPy-examples.ipynb)
 
-  
-### Customization
-If you want to manage the integration of notification inside your platform, 
+### Create new analytic based on <geosys/> metric 
+<p align="left">
+This set of examples will focus on how to create new analytics combining &ltgeosys/&gt data feed, your data and business logic to create easy to use and value added analytics. 
+</p>
+
+Here are the available examples:
+- Create field level warning based on weather information. See
+[notebook  ](https://github.com/GEOSYS/Examples-and-showcases/blob/main/Notebooks/Weather-field-analytic-model.ipynb)
+- Get field level maps from our virtual constellation. See
+[notebook  ](https://github.com/GEOSYS/Examples-and-showcases/blob/main/Notebooks/Imagery-field-analytic-model.ipynb)
+- Publish new analytic into Geosys Store in order to disseminate and publish them to the targeted final users. See
+[notebook  ](https://github.com/GEOSYS/Examples-and-showcases/blob/main/Notebooks/GeosysPy-examples.ipynb)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-## Use cases
-
 
 
 <!-- RESOURCES -->
