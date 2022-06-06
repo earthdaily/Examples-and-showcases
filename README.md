@@ -145,6 +145,7 @@ Here are the available examples:
 ## Resources 
 The following links will provide access to more information:
 - [EarthDaily agro developer portal  ](https://developer.geosys.com/)
+- [MyBinder  ](https://mybinder.org/)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
