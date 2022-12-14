@@ -1,0 +1,3 @@
+# Geosys
+
+::: geosyspy.constants

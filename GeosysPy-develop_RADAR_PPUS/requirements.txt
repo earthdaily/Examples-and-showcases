@@ -1,0 +1,8 @@
+requests
+requests-oauthlib
+oauthlib
+scipy
+pandas==1.3.5
+shapely
+rasterio
+xarray

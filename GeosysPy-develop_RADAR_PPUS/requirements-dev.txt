@@ -1,0 +1,7 @@
+python-dotenv
+pytest
+flake8
+black
+twine
+mkdocs
+mkdocstrings
