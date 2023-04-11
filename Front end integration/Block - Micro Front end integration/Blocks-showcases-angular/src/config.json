@@ -1,0 +1,16 @@
+{
+  "WEB_APP_URL": "http://localhost:3100",
+  "IDENTITY_SERVER_URL": "https://identity.preprod.geosys-na.com/v2.1",
+  "IDENTITY_SERVER_CLIENT_ID": "mfe_demonstrator_web",
+  "G6_API_DOMAIN_MANAGEMENT_URL": "https://api-pp.geosys-na.net/DomainManagement/Geosys.DomainManagement.WebAPI/V6",
+  "G6_API_FEATURE_UPLOAD_URL": "https://api-pp.geosys-na.net/feature-upload/v0",
+  "MFE_WEATHER_WIDGET_REMOTE_ENTRY": "https://blocks-pp.geosys.com/weather/v1",
+  "MFE_WEATHER_WIDGET_REMOTE_NAME": "mFEWeather",
+  "MFE_WEATHER_WIDGET_EXPOSED_MODULE": "./FederatedModule",
+  "MFE_TSV_REMOTE_ENTRY": "https://blocks-pp.geosys.com/time-series-viewer/v1",
+  "MFE_TSV_REMOTE_NAME": "mFETimeSeriesViewer",
+  "MFE_TSV_EXPOSED_MODULE": "./FederatedModule",
+  "MFE_BOUNDARY_MANAGEMENT_REMOTE_ENTRY": "https://blocks-pp.geosys.com/boundary-management/v1",
+  "MFE_BOUNDARY_MANAGEMENT_REMOTE_NAME": "mFEBoundaryManagement",
+  "MFE_BOUNDARY_MANAGEMENT_EXPOSED_MODULE": "./FederatedModule"
+}
