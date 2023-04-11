@@ -1,0 +1,15 @@
+@use "@angular/material" as mat;
+@import "@angular/material/theming";
+@import "earthdaily-palette";
+
+//EathDaily Theme
+$earthdaily-primary: mat.define-palette($earthdaily-palette-primary);
+$earthdaily-accent: mat.define-palette($earthdaily-palette-accent);
+$earthdaily-warn: mat.define-palette(mat.$red-palette);
+$earthdaily-theme: mat.define-light-theme(
+  $earthdaily-primary,
+  $earthdaily-accent,
+  $earthdaily-warn
+);
+
+@include mat.all-component-themes($earthdaily-theme);

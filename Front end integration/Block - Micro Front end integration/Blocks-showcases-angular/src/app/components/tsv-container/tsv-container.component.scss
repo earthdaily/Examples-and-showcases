@@ -1,0 +1,23 @@
+.panel {
+  display: flex;
+  > div {
+    padding: 20px;
+  }
+  .events {
+    display: flex;
+    flex-direction: column;
+    flex: 0 300px;
+    button {
+      max-width: 100px;
+    }
+  }
+  .events-received {
+    overflow-x: scroll;
+    font-size: 10px;
+    width: 300px;
+  }
+  .tsv {
+    width: 800px;
+    height: 600px;
+  }
+}

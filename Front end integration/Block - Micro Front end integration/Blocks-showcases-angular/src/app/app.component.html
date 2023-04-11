@@ -1,0 +1,20 @@
+<h1>Geosys Blocks Integration Showcases</h1>
+<div class="toggle">
+  <mat-button-toggle-group [value]="showBM">
+    <mat-button-toggle
+      class="mat-button-toggle-filter"
+      [value]="true"
+      (change)="showBM = true"
+      >Boundary Management</mat-button-toggle
+    >
+    <mat-button-toggle
+      class="mat-button-toggle-filter"
+      [value]="false"
+      (change)="showBM = false"
+      >Time Series Viewer</mat-button-toggle
+    >
+  </mat-button-toggle-group>
+</div>
+
+<app-bm-container *ngIf="showBM"></app-bm-container>
+<app-tsv-container *ngIf="!showBM"></app-tsv-container>

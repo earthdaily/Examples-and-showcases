@@ -1,0 +1,28 @@
+<p>
+  For more technical information:
+  <a
+    target="_blank"
+    href="https://blocks-pp.geosys.com/time-series-viewer/v1/assets/docs/timeseriesviewer-doc.md"
+    >Doc</a
+  >
+</p>
+<div class="panel">
+  <div class="events" *ngIf="!pending">
+    <h3>Send Event</h3>
+    <button mat-flat-button color="accent" (click)="export()">
+      Export Data
+    </button>
+    <h3>Events received</h3>
+    <div class="events-received">
+      {{ events }}
+    </div>
+  </div>
+  <div>
+    <h3 *ngIf="!pending && seasonField">
+      Displaying data for: {{ seasonField.name }}
+    </h3>
+    <h3 *ngIf="!pending && !seasonField">Your account has no season field</h3>
+    <div class="tsv" #timeseries></div>
+  </div>
+</div>
+
