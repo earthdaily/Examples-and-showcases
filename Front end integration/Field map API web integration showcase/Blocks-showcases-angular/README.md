@@ -24,3 +24,4 @@ All urls are hardcoded and bond to the Pre-Production Geosys Platform
 - Added https://github.com/angular-architects/module-federation-plugin
 - Update webpack.config.js to disable library sharing
 - Created components and used module federation with programmatic loading, using loadRemoteModule()
+
