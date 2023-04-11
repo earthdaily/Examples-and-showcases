@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+@mixin customFont(){
+  font-family: 'Montserrat', sans-serif;
+  color: #cdcdcd;
+  font-size: 18px;
+}
+
+.mfe-weather-container{
+  margin: 0;
+  height: 400px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #343d4b;
+  display: flex;
+
+  .mfe-weather-header{
+    width: 400px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    background: #fff;
+    color: #222831;
+    border-radius: 10px;
+    padding: 40px;
+    margin: 50px;
+  }
+  .mfe-weather-header:hover {
+      -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      transform: scale(0.95);
+  }
+
+  .mfe-weather-content{
+    @include customFont();
+  }
+  .mfe-weather-footer {
+    @include customFont();
+    & > label {
+      @include customFont();
+    }
+  }
+
+}
+

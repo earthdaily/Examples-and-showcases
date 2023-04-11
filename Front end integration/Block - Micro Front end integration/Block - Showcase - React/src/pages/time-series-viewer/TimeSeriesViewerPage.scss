@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+@mixin backgroundAndFont($bg, $color){
+  background-color:$bg;
+  color: $color;
+}
+
+@mixin button(){
+  background-color: #00b2f4;
+  color: white;
+  &:hover{
+    background-color: darken(#00b2f4, 5%);
+  }
+}
+
+#time-series-viewer-mfe-id {
+margin: 10px;
+  height: 600px;
+  width: 700px;
+
+  & div > app-date-boundaries > div.date-boundaries-container {
+    &> div.year-container > app-calendar > div.days > div {
+      display: flex;
+      justify-content: center;
+    }
+
+    & > div.footer > div.actions-buttons {
+      &> button.mat-focus-indicator.mat-flat-button.mat-button-base.mat-primary {
+        @include button();
+      }
+      &> button.mat-focus-indicator.mat-stroked-button.mat-button-base.mat-primary {
+        border: none;
+        &:hover {
+          background-color: darken(#f5f5f5, 5%);
+        }
+      }
+    }
+  }
+
+  #time-series-viewer-mfe-id > div > app-date-boundaries > div > div.dates > div:nth-child(1) > div
+
+  & > div > div > div.graphs-container > div > app-parameters-toolbar {
+  .header-container {
+    cursor: pointer;
+    border: 1px solid #f1f1f1;
+
+    & > div.action > button{
+      @include backgroundAndFont(transparent, lightslategray);
+
+    }
+
+    & div.title{
+      > button {
+        color: lightslategray;
+      }
+      > h3 {
+        color: lightslategray;
+      }
+    }
+  }
+
+  .parameters-container {
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    & div.index-column > button.mat-focus-indicator.mat-flat-button.mat-button-base.mat-accent {
+      @include backgroundAndFont(lightslategray, white);
+    }
+    & div.category-column > button.mat-focus-indicator.mat-flat-button.mat-button-base.mat-accent {
+      @include backgroundAndFont(lightslategray, white);
+    }
+    & div.spatialunit-column > button {
+      @include backgroundAndFont(lightslategray, white);
+    }
+    & div.category-column {
+      border-right: 1px solid #d9d9d9;
+      border-left: 1px solid #d9d9d9;
+    }
+    & div.category-column > button {
+      color: lightslategray;
+    }
+  }
+}
+}
+
+.mfe-time-series-container {
+  .graph-legend-container{
+    .legend-container{
+      .mat-focus-indicator, .mat-flat-button, .mat-button-base, .mat-primary {
+        @include button();
+      }
+    }
+  }
+}
+
+.mat-spinner > svg > circle {
+  background-color: blue;
+}
