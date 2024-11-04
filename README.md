@@ -133,7 +133,7 @@ Run the following line if you're looking for accessing Earthdaily data (reflecta
 
 Run the following line if you're looking for accessing Earthdaily advanced analytics (ready-to-use vegetation indexes, agronomic analysis such as harvest detection, etc.)
     
-    cd Analytic as a service
+    cd Analytics as a service
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
