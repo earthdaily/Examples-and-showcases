@@ -1,33 +1,26 @@
-<div id="top"></div>
-<!-- PROJECT SHIELDS -->
-<!--
-*** See the bottom of this document for the declaration of the reference variables
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href=https://github.com/GEOSYS>
-    <img src=https://earthdailyagro.com/wp-content/uploads/2022/01/Logo.svg alt="Logo" width="400" height="200">
+  <a href="https://github.com/earthdaily">
+    <img src="https://earthdailyagro.com/wp-content/uploads/2022/01/Logo.svg" alt="Logo" width="400" height="200">
   </a>
 
-  <h1 align="center">Examples & showcases</h3>
+  <h1 align="center">Examples & Showcases</h1>
 
   <p align="center">
-    Code examples and showcase on how to best leverage &ltgeosys/&gt platform capabilities.
+    Learn how to use &ltgeosys/&gt platform capabilities to integrate them in your own business workflow! 
     <br />
-    <a href=https://earthdailyagro.com/><strong>Who we are</strong></a>
+    <a href="https://earthdailyagro.com/"><strong>Who we are</strong></a>
     <br />
     <br />
-    <a href=https://github.com/GEOSYS/Examples-and-showcases>Project description</a>
+    <a href="https://github.com/earthdaily/GeosysPy/issues">Report Bug</a>
     ·
-    <a href=https://github.com/GEOSYS/Examples-and-showcases/issues>Report Bug</a>
-    ·
-    <a href=https://github.com/GEOSYS/Examples-and-showcases/issues>Request Feature</a>
+    <a href="https://github.com/earthdaily/GeosysPy/issues">Request Feature</a>
   </p>
 </p>
+
+<div align="center">
+</div>
 
 <div align="center">
   
@@ -36,36 +29,24 @@
 [![Youtube][youtube-shield]][youtube-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-  
+
 </div>
 
-<!--[![Stargazers][GitStars-shield]][GitStars-url]-->
-<!--[![languages][NETcore-shield]][NETcore-url]-->
-<!--[![Forks][forks-shield]][forks-url]-->
-<!--[![Stargazers][stars-shield]][stars-url]-->
-<!--[![CITest][CITest-shield]][CITest-url]-->
-<!--[![languages][language-python-shiedl]][]-->
-
 <!-- TABLE OF CONTENTS -->
-<details close>
+<details open>
   <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#examples">Examples</a></li>
-    <li><a href="#support-development">Support development</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#copyrights">Copyrights</a></li>
-  </ol>
+
+- [About The Project](#about-the-project)
+- [Getting Started](#getting-started)
+  * [Prerequisite](#prerequisite)
+  * [Installation](#installation)
+- [Usage with Jupyter Notebook](#usage-with-jupyter-notebook)
+- [Resources](#resources)
+- [Support development](#support-development)
+- [License](#license)
+- [Contact](#contact)
+- [Copyrights](#copyrights)
+
 </details>
 
 <!-- ABOUT THE PROJECT -->
@@ -88,65 +69,120 @@ The current project aims to provide samples, snippets and examples on how to int
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<div id="top"></div>
+<!-- PROJECT SHIELDS -->
+<!--
+*** See the bottom of this document for the declaration of the reference variables
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Prerequisites
+### Prerequisite
 
- <p align="left">
-Use of this project requires valids credentials from the &ltgeosys/&gt platform . If you need to get trial access, please register <a href=https://earthdailyagro.com/geosys-api/#get-started>here</a>.
-</p>
+To be able to run this example, you will need to have the following tools to be installed
+
+
+1. Install Git
+
+    Please install Git on your computer. You can download and install it by visiting the [official Git website]    (https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and following the provided instructions
+
+2. Install Conda
+
+    Please install Conda on your computer. You can download and install it by following the instructions provided on the [official Conda website](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
+3. Install Jupyter Notebook
+
+    Please install jupyter Notebook on your computer. You can install it by following the instructions provided on the [official Jupyter website](https://jupyter.org/install)
+
+
+Make sure you have valid credentials. If you need to get trial access, please register [here](https://earthdailyagro.com/geosys-api/#get-started).
+
+
+
+Those examples package have been tested on Python 3.12.0
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 ### Installation
-To access and try availble examples, you can either fork the current repo and use your prefered code editor or use try Python notebook on MyBinder usin the follwing link.
 
-[![badge](https://img.shields.io/badge/Try%20%3Cgeosys/%3E-examples-579ACA.svg?logo=data:image/png;base64,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)](https://mybinder.org/v2/gh/GEOSYS/Examples-and-showcases/main?labpath=Notebooks)
+To set up the project, follow these steps:
 
-### Configuration
+1. Clone the project repository:
+
+    ```
+    git clone https://github.com/earthdaily/Examples-and-showcases
+    ```
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-   
-   
-<!-- EXAMPLES -->
-## Examples
+2. Change the directory:
 
-### <geosys/> Integration
+    ```
+    cd Examples-and-showcases
+    ```
 
-<p align="left">
-This set of examples will focus on how to integrate data, metrics and analytics from the &ltgeosys/&gt platform into your own solutions. 
-</p>
+3. Chooses your area of interest 
 
-Here are the available examples:
-- Integrate field level map (NDVI...) into most common online GIS library like Openlayers, Leaflet, or other JS libraries. See
-[code example  ](https://github.com/GEOSYS/Examples-and-showcases/tree/main/Field%20map%20web%20integration%20showcase)
-- Get inputs to feed your Python models using GeosysPy. See
-[notebook  ](https://github.com/GEOSYS/Examples-and-showcases/blob/main/Notebooks/GeosysPy-examples.ipynb)
+Run the following line if you're looking for accessing Earthdaily data (reflectances from EarthDataStore for instance)
+    
+    cd Data as a service
 
-### Create new analytic based on <geosys/> metric 
-<p align="left">
-This set of examples will focus on how to create new analytics combining &ltgeosys/&gt data feed, your data and business logic to create easy to use and value added analytics. 
-</p>
-
-Here are the available examples:
-- Create field level warning based on weather information. See
-[notebook  ](https://github.com/GEOSYS/Examples-and-showcases/blob/main/Notebooks/Weather-field-analytic-model.ipynb)
-- Get field level maps from our virtual constellation. See
-[notebook  ](https://github.com/GEOSYS/Examples-and-showcases/blob/main/Notebooks/Imagery-field-analytic-model.ipynb)
-- Publish new analytic into Geosys Store in order to disseminate and publish them to the targeted final users. See
-[notebook  ](https://github.com/GEOSYS/Examples-and-showcases/blob/main/Notebooks/GeosysPy-examples.ipynb)
+Run the following line if you're looking for accessing Earthdaily advanced analytics (ready-to-use vegetation indexes, agronomic analysis such as harvest detection, etc.)
+    
+    cd Analytic as a service
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Usage with Jupyter Notebook
+
+To use the project with Jupyter Notebook, follow these steps:
+
+
+1. Create a Conda environment:
+
+    To create a Conda environment, ensure first you have installed Conda on your computer. You can download and install it by following the instructions provided on the official Conda website.
+    
+    ```
+    conda create -y --name your_environment_name 
+    ```
+
+
+2. Activate the Conda environment:
+    
+    ```
+    conda activate your_environment_name
+    ```
+   
+3. Install the project dependencies. You can do this by running the following command in your terminal:
+
+    ```
+    conda install -y pip
+    pip install -r requirements.txt
+    pip install ipykernel
+    ```
+4. Set up the Jupyter Notebook kernel for the project:
+
+    ```
+    python -m ipykernel install --user --name your_environment_name --display-name your_kernel_name
+    ```
+5. Open jupyter and then the example notebook you want to use by clicking on it.
+
+
+6. Select the "Kernel" menu and choose "Change Kernel". Then, select "your_kernel_name" from the list of available kernels.
+
+
+7. Run the notebook cells to execute the code example.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- RESOURCES -->
 ## Resources 
 The following links will provide access to more information:
 - [EarthDaily agro developer portal  ](https://developer.geosys.com/)
-- [MyBinder  ](https://mybinder.org/)
-
+- [Pypi package](https://pypi.org/project/geosyspy/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -157,24 +193,21 @@ If this project has been useful, that it helped you or your business to save pre
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- LICENSE -->
 ## License
 
-Distributed under the [GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0.en.html). 
+Distributed under the [MIT License](https://github.com/earthdaily/Studies-and-Analysis/blob/main/LICENSE).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- CONTACT -->
 ## Contact
 
-For any additonal information, please <a href="mailto: sales@earthdailyagro.com">email us</a>
+For any additonal information, please [email us](mailto:sales@earthdailyagro.com).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- COPYRIGHT -->
 ## Copyrights
 
-© 2022 Geosys Holdings ULC, an Antarctica Capital portfolio company | All Rights Reserved.
+© 2023 Geosys Holdings ULC, an Antarctica Capital portfolio company | All Rights Reserved.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -188,26 +221,21 @@ For any additonal information, please <a href="mailto: sales@earthdailyagro.com"
 [contributors-url]: https://github.com/github_username/repo/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=plastic&logo=appveyor
 [forks-url]: https://github.com/github_username/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/qgis-plugin/repo.svg?style=plastic&logo=appveyor
+[stars-shield]: https://img.shields.io/github/stars/analytics-datacube-processor/repo.svg?style=plastic&logo=appveyor
 [stars-url]: https://github.com/github_username/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/GEOSYS/qgis-plugin/repo.svg?style=social
-[issues-url]: https://github.com/github_username/repo/issues
-[license-shield]: https://img.shields.io/github/license/GEOSYS/qgis-plugin
-[license-url]: https://www.gnu.org/licenses/gpl-3.0.en.html
+[issues-shield]: https://img.shields.io/github/issues/earthdaily/analytics-datacube-processor/repo.svg?style=social
+[issues-url]: https://github.com/earthdaily/analytics-datacube-processor/issues
+[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
+[license-url]: https://opensource.org/licenses/MIT
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=social&logo=linkedin
 [linkedin-url]: https://www.linkedin.com/company/earthdailyagro/mycompany/
 [twitter-shield]: https://img.shields.io/twitter/follow/EarthDailyAgro?style=social
 [twitter-url]: https://img.shields.io/twitter/follow/EarthDailyAgro?style=social
 [youtube-shield]: https://img.shields.io/youtube/channel/views/UCy4X-hM2xRK3oyC_xYKSG_g?style=social
 [youtube-url]: https://img.shields.io/youtube/channel/views/UCy4X-hM2xRK3oyC_xYKSG_g?style=social
-[language-python-shiedl]: https://img.shields.io/badge/python-3.7-green?logo=python
+[language-python-shiedl]: https://img.shields.io/badge/python-3.9-green?logo=python
 [language-python-url]: https://pypi.org/ 
-[GitStars-shield]: https://img.shields.io/github/stars/GEOSYS?style=social
-[GitStars-url]: https://img.shields.io/github/stars/GEOSYS?style=social
-[CITest-shield]: https://img.shields.io/github/workflow/status/GEOSYS/qgis-plugin/Continous%20Integration
-[CITest-url]: https://img.shields.io/github/workflow/status/GEOSYS/qgis-plugin/Continous%20Integration
-
-
-
-
-
+[GitStars-shield]: https://img.shields.io/github/stars/earthdaily?style=social
+[GitStars-url]: https://img.shields.io/github/stars/earthdaily?style=social
+[CITest-shield]: https://img.shields.io/github/workflow/status/earthdaily/analytics-datacube-v2/Continous%20Integration
+[CITest-url]: https://img.shields.io/github/workflow/status/earthdaily/analytics-datacube-v2/Continous%20Integration
