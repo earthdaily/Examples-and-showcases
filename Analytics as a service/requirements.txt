@@ -1,8 +1,12 @@
 dotenv
 os
+sys
 requests
 json
+getpass
 pandas
+geopandas
+numpy
 matplotlib
 datetime 
 shapely 
