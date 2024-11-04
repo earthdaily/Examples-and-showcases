@@ -1,9 +1,4 @@
-dotenv
-os
-sys
 requests
-json
-getpass
 pandas
 geopandas
 numpy
