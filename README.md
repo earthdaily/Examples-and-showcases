@@ -98,11 +98,12 @@ To be able to run this example, you will need to have the following tools to be 
     Please install jupyter Notebook on your computer. You can install it by following the instructions provided on the [official Jupyter website](https://jupyter.org/install)
 
 
-Make sure you have valid credentials. If you need to get trial access, please register [here](https://earthdailyagro.com/geosys-api/#get-started).
+If you want to test Earthdaily agro APIs, make sure you have valid credentials. If you need to get trial access, please register [here](https://earthdailyagro.com/geosys-api/#get-started).
+
+If you want to access data directly from EarthDataStore, please make sure you have appropriate credentials, and that you follow the earthdaily python client installation documentation [here](https://earthdaily.github.io/earthdaily-python-client/).  If you need to get trial access, please register [here](https://console.earthdaily.com/mosaics/signup).
 
 
-
-Those examples package have been tested on Python 3.12.0
+Those examples package have been tested on Python 3.13.0
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -159,7 +160,6 @@ To use the project with Jupyter Notebook, follow these steps:
 3. Install the project dependencies. You can do this by running the following command in your terminal:
 
     ```
-    conda install -y pip
     pip install -r requirements.txt
     pip install ipykernel
     ```
