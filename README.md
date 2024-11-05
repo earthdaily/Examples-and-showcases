@@ -132,6 +132,7 @@ Run the following line if you're looking for accessing Earthdaily data (reflecta
     cd Data as a service
 
 Run the following line if you're looking for accessing Earthdaily advanced analytics (ready-to-use vegetation indexes, agronomic analysis such as harvest detection, etc.)
+If you're working on the Analytics as a service directory, do not forget to update the .env file with your credentials.
     
     cd Analytics as a service
 
