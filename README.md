@@ -160,6 +160,7 @@ To use the project with Jupyter Notebook, follow these steps:
 3. Install the project dependencies. You can do this by running the following command in your terminal:
 
     ```
+    conda install pip
     pip install -r requirements.txt
     pip install ipykernel
     ```
