@@ -4,7 +4,6 @@ The goal of this app is to provide a sample code for geosys MFE integration in a
 Geosys MFE available:
 - Weather Widget (Angular)
 - Time Series Viewer (Angular)
-- Boundary Management (React)
 
 
 ## Installation
