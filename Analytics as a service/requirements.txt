@@ -3,6 +3,7 @@ pandas
 geopandas
 numpy
 matplotlib
+seaborn
 datetime 
 shapely 
 python-dotenv
