@@ -38,7 +38,7 @@ export class AuthService {
     };
 
     return fetch(
-      "https://identity.preprod.geosys-na.com/v2.1/connect/token",
+      "https://identity.geosys-na.com/v2.1/connect/token",
       requestOptions
     )
       .then((r) => r.text())

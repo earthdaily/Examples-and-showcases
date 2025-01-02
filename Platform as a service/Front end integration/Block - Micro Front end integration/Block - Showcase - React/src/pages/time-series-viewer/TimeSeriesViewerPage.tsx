@@ -9,7 +9,7 @@ import { Grower } from '@core/models/geosys/Grower';
 import { getSeasonFields, selectedSeasonFieldId, selectSeasonFields, selectSelectedSeasonFieldId } from '@core/store/slices/SeasonFieldSlice';
 import { SeasonFieldResponse } from '@core/models/geosys/SeasonFieldResponse';
 import './TimeSeriesViewerPage.scss';
-import { loadRemoteModule } from '@core/mf-runtime/dynamic-federation';
+import { LoadRemoteEntryOptions, loadRemoteModule } from '@core/mf-runtime/dynamic-federation';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { getToken } from '@core/auth/authUtils';
 
@@ -23,6 +23,8 @@ const TimeSeriesViewerPage: FC = (): JSX.Element => {
     const [openGrowers, setOpenGrowers] = useState(false);
     const [openSeasonFields, setOpenSeasonFields] = useState(false);
     const tsvElementRef = React.useRef();
+    const [displayTSV, setDisplayTSV] = useState(false);
+    const [displayParameters, setDisplayParameters] = useState(false);
 
     const loadMFE = async () => {
         // @ts-ignore
@@ -31,11 +33,13 @@ const TimeSeriesViewerPage: FC = (): JSX.Element => {
             tsvElementRef.current.innerHTML = '';
         }
         try {
-            timeSeriesViewerModule = await loadRemoteModule({
-                remoteName: process.env.MFE_TSV_REMOTE_NAME,
+            timeSeriesViewerModule = await loadRemoteModule<LoadRemoteEntryOptions>({
+                type: 'module',
                 exposedModule: process.env.MFE_TSV_EXPOSED_MODULE,
+                remoteEntry: process.env.MFE_TSV_REMOTE_ENTRY + '/remoteEntry.mjs',
             });
             await timeSeriesViewerModule?.mount([tsvElementRef.current]);
+            setDisplayParameters(true);
         } catch (e) {
             console.error(e);
         }
@@ -68,6 +72,8 @@ const TimeSeriesViewerPage: FC = (): JSX.Element => {
             const endDate = new Date(
                 new Date(sowingDate.getFullYear(), sowingDate.getMonth(), sowingDate.getDate()).setDate(startDate.getDate() + 100),
             );
+
+            setDisplayTSV(true);
 
             const event = new CustomEvent('MFE.TimeSeriesViewer.Configure', {
                 detail: {
@@ -130,53 +136,57 @@ const TimeSeriesViewerPage: FC = (): JSX.Element => {
                 <div>
                     <h1>Time Series</h1>
                 </div>
-                <MFEContext>
-                    {/********************************************************************/}
-                    <ControlContainer>
-                        <FormControl variant='outlined' size='small'>
-                            <InputLabel id='label-growers-tsv'>Select a Grower</InputLabel>
-                            <CustomSelect
-                                labelId='open-growers-tsv-label'
-                                id='grower-list-tsv'
-                                variant='outlined'
-                                label='Select Growers'
-                                open={openGrowers}
-                                onClose={() => setOpenGrowers(false)}
-                                onOpen={() => setOpenGrowers(true)}
-                                value={selectedGrower}
-                                onChange={handleGrowerChange}
-                                displayEmpty={true}
-                            >
-                                {growerItems}
-                            </CustomSelect>
-                        </FormControl>
-                    </ControlContainer>
+                {displayParameters ? (
+                    <MFEContext>
+                        {/********************************************************************/}
+                        <ControlContainer>
+                            <FormControl variant='outlined' size='small'>
+                                <InputLabel id='label-growers-tsv'>Select a Grower</InputLabel>
+                                <CustomSelect
+                                    labelId='open-growers-tsv-label'
+                                    id='grower-list-tsv'
+                                    variant='outlined'
+                                    label='Select Growers'
+                                    open={openGrowers}
+                                    onClose={() => setOpenGrowers(false)}
+                                    onOpen={() => setOpenGrowers(true)}
+                                    value={selectedGrower}
+                                    onChange={handleGrowerChange}
+                                    displayEmpty={true}
+                                >
+                                    {growerItems}
+                                </CustomSelect>
+                            </FormControl>
+                        </ControlContainer>
 
-                    {/********************************************************************/}
-                    <ControlContainer>
-                        <FormControl variant='outlined' size='small'>
-                            <InputLabel id='label-season-fields-tsv'>Select a Season Field</InputLabel>
-                            <CustomSelect
-                                disabled={!!!selectedGrower}
-                                labelId='open-season-field-tsv-label'
-                                id='season-field-list-tsv'
-                                variant='outlined'
-                                label='Select Season Fields'
-                                open={openSeasonFields}
-                                onClose={() => setOpenSeasonFields(false)}
-                                onOpen={() => setOpenSeasonFields(true)}
-                                value={selectedSeasonField}
-                                onChange={handleSeasonFieldChange}
-                                displayEmpty={true}
-                            >
-                                {seasonFieldsItems}
-                            </CustomSelect>
-                        </FormControl>
-                    </ControlContainer>
-                    {/********************************************************************/}
-                </MFEContext>
+                        {/********************************************************************/}
+                        <ControlContainer>
+                            <FormControl variant='outlined' size='small'>
+                                <InputLabel id='label-season-fields-tsv'>Select a Season Field</InputLabel>
+                                <CustomSelect
+                                    disabled={!!!selectedGrower}
+                                    labelId='open-season-field-tsv-label'
+                                    id='season-field-list-tsv'
+                                    variant='outlined'
+                                    label='Select Season Fields'
+                                    open={openSeasonFields}
+                                    onClose={() => setOpenSeasonFields(false)}
+                                    onOpen={() => setOpenSeasonFields(true)}
+                                    value={selectedSeasonField}
+                                    onChange={handleSeasonFieldChange}
+                                    displayEmpty={true}
+                                >
+                                    {seasonFieldsItems}
+                                </CustomSelect>
+                            </FormControl>
+                        </ControlContainer>
+                        {/********************************************************************/}
+                    </MFEContext>
+                ) : (
+                    <p>Loading Block...</p>
+                )}
 
-                <TSVContainer id='time-series-viewer-mfe-id' ref={tsvElementRef} />
+                <TSVContainer id='time-series-viewer-mfe-id' ref={tsvElementRef} style={{ display: displayTSV === true ? 'block' : 'none' }} />
             </CustomContainer>
         </MuiThemeProvider>
     );

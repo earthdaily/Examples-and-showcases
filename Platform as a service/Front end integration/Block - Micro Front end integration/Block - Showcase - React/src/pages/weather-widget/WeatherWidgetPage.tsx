@@ -34,6 +34,8 @@ const WeatherWidgetPage: FC = (): JSX.Element => {
     const [openGrowers, setOpenGrowers] = useState(false);
     const [openSeasonFields, setOpenSeasonFields] = useState(false);
     const [selectedDate, setSelectedDate] = useState<Date>(getCurrentISODate());
+    const [displayMFE, setDisplayMFE] = useState(false);
+    const [displayParameters, setDisplayParameters] = useState(false);
 
     const wwElementRef = React.useRef();
 
@@ -46,9 +48,11 @@ const WeatherWidgetPage: FC = (): JSX.Element => {
 
         try {
             weatherWidgetModule = await loadRemoteModule({
-                remoteName: process.env.MFE_WEATHER_WIDGET_REMOTE_NAME,
+                type: 'module',
                 exposedModule: process.env.MFE_WEATHER_WIDGET_EXPOSED_MODULE,
+                remoteEntry: process.env.MFE_WEATHER_WIDGET_REMOTE_ENTRY + '/remoteEntry.mjs',
             });
+            setDisplayParameters(true);
             await weatherWidgetModule?.mount([wwElementRef.current]);
         } catch (e) {
             console.error(e);
@@ -88,6 +92,7 @@ const WeatherWidgetPage: FC = (): JSX.Element => {
                 } /*as IWeatherWidget*/,
             );
         }
+        setDisplayMFE(true);
     };
 
     const handleSelectedDate = (date: Date) => {
@@ -153,69 +158,73 @@ const WeatherWidgetPage: FC = (): JSX.Element => {
                 <div>
                     <h1>Weather Widget</h1>
                 </div>
-                <MFEContext>
-                    {/********************************************************************/}
-                    <ControlContainer>
-                        <FormControl variant='outlined'>
-                            <InputLabel id='label-growers'>Select a Grower</InputLabel>
-                            <CustomSelect
-                                labelId='open-growers-label'
-                                id='grower-list'
-                                variant='outlined'
-                                label='Select Growers'
-                                open={openGrowers}
-                                onClose={() => setOpenGrowers(false)}
-                                onOpen={() => setOpenGrowers(true)}
-                                value={selectedGrower}
-                                onChange={handleGrowerChange}
-                                displayEmpty={true}
-                            >
-                                {growerItems}
-                            </CustomSelect>
-                        </FormControl>
-                    </ControlContainer>
-                    {/********************************************************************/}
-                    <ControlContainer>
-                        <FormControl variant='outlined'>
-                            <InputLabel id='label-growers-ww'>Select a Season Field</InputLabel>
-                            <CustomSelect
-                                disabled={!!!selectedGrower}
-                                labelId='open-season-field-label'
-                                id='season-field-list'
-                                variant='outlined'
-                                label='Select Season Fields'
-                                open={openSeasonFields}
-                                onClose={() => setOpenSeasonFields(false)}
-                                onOpen={() => setOpenSeasonFields(true)}
-                                value={selectedSeasonField}
-                                onChange={handleSeasonFieldChange}
-                                displayEmpty={true}
-                            >
-                                {seasonFieldsItems}
-                            </CustomSelect>
-                        </FormControl>
-                    </ControlContainer>
-                    {/********************************************************************/}
+                {displayParameters ? (
+                    <MFEContext>
+                        {/********************************************************************/}
+                        <ControlContainer>
+                            <FormControl variant='outlined'>
+                                <InputLabel id='label-growers'>Select a Grower</InputLabel>
+                                <CustomSelect
+                                    labelId='open-growers-label'
+                                    id='grower-list'
+                                    variant='outlined'
+                                    label='Select Growers'
+                                    open={openGrowers}
+                                    onClose={() => setOpenGrowers(false)}
+                                    onOpen={() => setOpenGrowers(true)}
+                                    value={selectedGrower}
+                                    onChange={handleGrowerChange}
+                                    displayEmpty={true}
+                                >
+                                    {growerItems}
+                                </CustomSelect>
+                            </FormControl>
+                        </ControlContainer>
+                        {/********************************************************************/}
+                        <ControlContainer>
+                            <FormControl variant='outlined'>
+                                <InputLabel id='label-growers-ww'>Select a Season Field</InputLabel>
+                                <CustomSelect
+                                    disabled={!!!selectedGrower}
+                                    labelId='open-season-field-label'
+                                    id='season-field-list'
+                                    variant='outlined'
+                                    label='Select Season Fields'
+                                    open={openSeasonFields}
+                                    onClose={() => setOpenSeasonFields(false)}
+                                    onOpen={() => setOpenSeasonFields(true)}
+                                    value={selectedSeasonField}
+                                    onChange={handleSeasonFieldChange}
+                                    displayEmpty={true}
+                                >
+                                    {seasonFieldsItems}
+                                </CustomSelect>
+                            </FormControl>
+                        </ControlContainer>
+                        {/********************************************************************/}
 
-                    <ControlContainer>
-                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                            <DatePicker
-                                disabled={!!!selectedSeasonField}
-                                label='Select Date'
-                                value={selectedDate}
-                                onChange={(e) => handleSelectedDate(e)}
-                                inputVariant={'outlined'}
-                                format='MM/dd/yyyy'
-                                maxDate={getCurrentISODate()}
-                                // minDate={addDays(selectedDate, -10)}
-                            />
-                        </MuiPickersUtilsProvider>
-                    </ControlContainer>
+                        <ControlContainer>
+                            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                <DatePicker
+                                    disabled={!!!selectedSeasonField}
+                                    label='Select Date'
+                                    value={selectedDate}
+                                    onChange={(e) => handleSelectedDate(e)}
+                                    inputVariant={'outlined'}
+                                    format='MM/dd/yyyy'
+                                    maxDate={getCurrentISODate()}
+                                    // minDate={addDays(selectedDate, -10)}
+                                />
+                            </MuiPickersUtilsProvider>
+                        </ControlContainer>
 
-                    {/********************************************************************/}
-                </MFEContext>
+                        {/********************************************************************/}
+                    </MFEContext>
+                ) : (
+                    <p>Loading Block..</p>
+                )}
 
-                <WeatherWidgetContainer id='weather-widget-mfe-id' ref={wwElementRef} />
+                <WeatherWidgetContainer id='weather-widget-mfe-id' ref={wwElementRef} style={{ display: displayMFE === true ? 'block' : 'none' }} />
             </CustomContainer>
         </MuiThemeProvider>
     );

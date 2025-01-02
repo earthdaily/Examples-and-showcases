@@ -28,7 +28,7 @@ import { AuthService } from "src/app/utils/auth-utils";
   styleUrls: ["./tsv-container.component.scss"],
 })
 export class TsvContainerComponent implements AfterViewInit, OnDestroy {
-  remoteEntryUrl = "https://blocks-pp.geosys.com/time-series-viewer/v1/";
+  remoteEntryUrl = "https://blocks-pp.geosys.com/time-series-viewer/v1";
 
   @ViewChild("timeseries", { static: false }) containerRef:
     | ElementRef
@@ -54,7 +54,7 @@ export class TsvContainerComponent implements AfterViewInit, OnDestroy {
       this.timeSeriesViewerModule = await loadRemoteModule({
         type: "module",
         exposedModule: "./FederatedModule",
-        remoteEntry: this.remoteEntryUrl + "remoteEntry.mjs",
+        remoteEntry: this.remoteEntryUrl + "/remoteEntry.mjs",
       });
 
       //Mount the MFE in the DOM

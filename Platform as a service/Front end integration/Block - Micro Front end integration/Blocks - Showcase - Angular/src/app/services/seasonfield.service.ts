@@ -37,7 +37,7 @@ export class SeasonFieldService {
    */
   getFirstSeasonField(token: string): Observable<SeasonField> {
     let url =
-      "https://api-pp.geosys-na.net/DomainManagement/Geosys.DomainManagement.WebAPI/V6" +
+      "https://api.geosys-na.net/DomainManagement/Geosys.DomainManagement.WebAPI/V6" +
       `/seasonfields?$fields=${seasonFieldPropertiesToLoad}&$limit=1` +
       `&$epsg-out=3857`;
 
