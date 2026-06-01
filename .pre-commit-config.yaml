@@ -1,0 +1,8 @@
+# Pre-commit hooks for the Examples-and-showcases repo.
+# Install once with:  pip install pre-commit && pre-commit install
+# Run on all files:    pre-commit run --all-files
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.8.1
+    hooks:
+      - id: nbstripout

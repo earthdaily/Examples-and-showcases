@@ -1,0 +1,12 @@
+# The agriculture/ examples rely on the EarthDaily Agriculture client package,
+# which installs every geospatial & data dependency (geopandas, shapely,
+# rasterio, pandas, numpy, matplotlib, requests, python-dotenv, Pillow, ...)
+# transitively. The [jupyter] extra adds jupyter / ipykernel / notebook.
+#
+# Public PyPI distribution name: earthdaily-agriculture (release pending).
+# Until then, install the client package from its repository.
+edagro-utils[jupyter]
+
+# Used by the showcase notebooks but NOT pulled in by the client package:
+seaborn
+python-dotenv

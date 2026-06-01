@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/earthdaily">
-    <img src="https://earthdailyagro.com/wp-content/uploads/2022/01/Logo.svg" alt="Logo" width="400" height="200">
+    <img src="https://earthdaily.com/hs-fs/hubfs/3.%20Logos%20all/EarthDaily%20Logos/EDA_logo_main.png?width=240&height=113&name=EDA_logo_main.png" alt="Logo" width="400" height="200">
   </a>
 
   <h1 align="center">Examples & Showcases</h1>
@@ -10,12 +10,12 @@
   <p align="center">
     Learn how to use &ltgeosys/&gt platform capabilities to integrate them in your own business workflow! 
     <br />
-    <a href="https://earthdailyagro.com/"><strong>Who we are</strong></a>
+    <a href="https://earthdaily.com/"><strong>Who we are</strong></a>
     <br />
     <br />
-    <a href="https://github.com/earthdaily/GeosysPy/issues">Report Bug</a>
+    <a href="https://github.com/earthdaily/earthdaily-agriculture/issues">Report Bug</a>
     ·
-    <a href="https://github.com/earthdaily/GeosysPy/issues">Request Feature</a>
+    <a href="https://github.com/earthdaily/earthdaily-agriculture/issues">Request Feature</a>
   </p>
 </p>
 
@@ -37,6 +37,7 @@
   <summary>Table of Contents</summary>
 
 - [About The Project](#about-the-project)
+- [Available examples](#available-examples)
 - [Getting Started](#getting-started)
   * [Prerequisite](#prerequisite)
   * [Installation](#installation)
@@ -52,20 +53,32 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-EarthDaily Agro is the agricultural analysis division of EartDaily Analytics. Learn more about Earth Daily at [EarthDaily Analytics | Satellite imagery & data for agriculture, insurance, surveillance](https://earthdaily.com/).  EarthDaily Agro uses satellite imaging to provide advanced analytics to mitigate risk and increase efficiencies – leading to more sustainable outcomes for the organizations and people who feed the planet.
-<p align="center">
-  <a href=https://earthdailyagro.com/geosys/>
-    <img src=https://earthdailyagro.com/wp-content/uploads/2022/01/new-logo.png alt="Logo" width="400">
-  </a>
-</p>
+EarthDaily Agriculture is the agricultural analytic division of EartDaily Analytics. Learn more about Earth Daily at [EarthDaily Analytics | Satellite imagery & data for agriculture, insurance, surveillance](https://earthdaily.com/).  EarthDaily Agriculture uses satellite imaging to provide advanced analytics to mitigate risk and increase efficiencies – leading to more sustainable outcomes for the organizations and people who feed the planet.
 
- <p align="left">
 Throught our &ltgeosys/&gt platform, we make geospatial analytics easily accessible for you to be browsed or analyzed, within our cloud or within your own environment. We provide developers and data scientists both flexibility and extensibility with analytic ready data and digital agriculture ready development blocks. We empower your team to enrich your systems with information at the field, regional or continent level via our API or Apps.
 </p>
 
 We have a team of experts around the world that understand local crops and ag industry, as well as advanced analytics to support your business.
 
 The current project aims to provide samples, snippets and examples on how to integrate data and analytics but expand and enrich capabilites by creating your own analytic based satellite imagery, weather and many others available inputs. 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- AVAILABLE EXAMPLES -->
+## Available examples
+
+The repository is organized by the type of EarthDaily offering you want to explore:
+
+### `data/` — Data as a service
+
+Direct access to EarthDaily data from EarthPlatform.
+
+- **EDAgro_reflectance_extraction.ipynb** — Extract satellite reflectance data over a field.
+
+### `agriculture/` — Advanced agronomic analytics
+
+Ready-to-use vegetation indexes and agronomic analytics through the &ltgeosys/&gt platform. Update the `.env` file with your credentials before running these notebooks.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -98,12 +111,12 @@ To be able to run this example, you will need to have the following tools to be 
     Please install jupyter Notebook on your computer. You can install it by following the instructions provided on the [official Jupyter website](https://jupyter.org/install)
 
 
-If you want to test Earthdaily agro APIs, make sure you have valid credentials. If you need to get trial access, please register [here](https://earthdailyagro.com/geosys-api/#get-started).
+If you want to test Earthdaily Agriculture APIs, make sure you have valid credentials. If you need to get trial access, please register [here](https://earthdaily.com/contact).
 
-If you want to access data directly from EarthDataStore, please make sure you have appropriate credentials, and that you follow the earthdaily python client installation documentation [here](https://earthdaily.github.io/earthdaily-python-client/).  If you need to get trial access, please register [here](https://console.earthdaily.com/mosaics/signup).
+If you want to access data directly from EarthPlatform, please make sure you have appropriate credentials, and that you follow the earthdaily python client installation documentation [here](https://earthdaily.github.io/earthdaily-python-client/).  If you need to get trial access, please register [here](https://console.earthdaily.com/mosaics/signup).
 
 
-Those examples package have been tested on Python 3.13.0
+Those examples require Python 3.10+ and have been tested on Python 3.12.x (the EarthDaily Agriculture client does not support Python 3.13).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -125,16 +138,16 @@ To set up the project, follow these steps:
     cd Examples-and-showcases
     ```
 
-3. Chooses your area of interest 
+3. Choose your area of interest
 
 Run the following line if you're looking for accessing Earthdaily data (reflectances from EarthDataStore for instance)
-    
-    cd Data as a service
 
-Run the following line if you're looking for accessing Earthdaily advanced analytics (ready-to-use vegetation indexes, agronomic analysis such as harvest detection, etc.)
-If you're working on the Analytics as a service directory, do not forget to update the .env file with your credentials.
-    
-    cd Analytics as a service
+    cd data
+
+Run the following line if you're looking for accessing Earthdaily advanced agronomic analytics (ready-to-use vegetation indexes, regional analytics, agronomic analysis such as emergence detection, etc.)
+If you're working on the `agriculture` directory, do not forget to update the `.env` file with your credentials.
+
+    cd agriculture
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -183,8 +196,8 @@ To use the project with Jupyter Notebook, follow these steps:
 <!-- RESOURCES -->
 ## Resources 
 The following links will provide access to more information:
-- [EarthDaily agro developer portal  ](https://developer.geosys.com/)
-- [Pypi package](https://pypi.org/project/geosyspy/)
+- [EarthDaily documentation  ](https://docs.earthdaily.com/)
+- [Pypi package](https://pypi.org/project/earthdaily-agriculture/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -209,7 +222,7 @@ For any additonal information, please [email us](mailto:sales@earthdailyagro.com
 
 ## Copyrights
 
-© 2023 Geosys Holdings ULC, an Antarctica Capital portfolio company | All Rights Reserved.
+© 2026 EarthDaily Analytics | All Rights Reserved.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

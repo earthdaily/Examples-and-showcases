@@ -1,0 +1,14 @@
+# Environment files (never commit real credentials)
+.env
+*.env
+!.env.template
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
